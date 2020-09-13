@@ -1,0 +1,6 @@
+{
+    "name":"proudcts-production",
+    "mail":{
+        "host":"production-host"
+    }
+}
