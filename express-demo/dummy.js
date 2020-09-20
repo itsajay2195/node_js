@@ -2,20 +2,30 @@ console.log('setp 1')
 
 getUser(1,(user)=>{
     console.log("user",user.name)
-    getRepo(user.name,(repos)=>{
-        console.log(repos)
-    })
+    getRepo(user.name,getRepos)
 })
 console.log('setp 2')
 
 
-function getUser(id,callback){
-    setTimeout(()=>{
-       console.log('inside the async fn and the id is',id)
-       callback({id:1,"name":"Brindha"})
+// function getUsername(user){
+//     console.log(user.name)
+//     getRepos(user.name)
+// }
 
+// function getRepos(repos){
+//     console.log(repos);
+// }
 
-    }),2000
+function getUser(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log('inside the async fn and the id is',id)
+            resolve({id:1,"name":"Brindha"})
+            
+     
+         }),2000
+    })
+   
 }
 
 
